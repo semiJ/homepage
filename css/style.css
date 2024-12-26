@@ -408,7 +408,7 @@
     #aboutme > ul {
         width: 80%;
         height: 70vh;
-        background-color: #72cbff;
+        /* background-color: #72cbff; */
         margin: 0px auto;
 
         display: flex;
@@ -431,22 +431,9 @@
         transition: 3s;
     }
 
-    @keyframes flipCard {
-        0% {
-            transform: rotateY(0deg);
-        }
-        100% {
-            transform: rotateY(180deg);
-        }
-    }
-
-    .flip {
-        animation: flipCard 3s infinite alternate;
-    }
-
     /* hover 시 애니메이션 멈춤 */
     .flip:hover {
-        animation-play-state: paused;
+        transform: rotateY(180deg);
     }
 
     .aboutFront {
@@ -467,24 +454,59 @@
         backface-visibility: hidden;
         z-index: 10;
         border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .aboutFront .aboutprofile, .aboutBack .aboutprofile {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        color: var(--main_color01);
+        font-size: 1.5em;
+        transform: translateY(-280px);
     }
 
     .aboutBack {
         width: 100%;
         height: 100%;
-        background-color: lightcoral;
-        color: #fff;
-        font-size: 3rem;
         display: flex;
         justify-content: center;
         align-items: center;
         transform: rotateY(180deg);
         border-radius: 20px;
+        overflow: hidden;
+        background-color: var(--main_color02);
+    }
+
+    .aboutBack .aboutmeSkill {
+        width: 100%;
+    }
+
+    .aboutBack .aboutmeSkill li {
+        width: 80%;
+        margin: 10px auto;
+        background-color: var(--main_color03);
+        color: var(--main_color01);
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        position: relative;
     }
 
     .aboutRight {
         width: 60%;
         height: 100%;
+        padding: 2.5em;
+        box-sizing: border-box;
+        line-height: 40px;
+    }
+
+    .aboutRight dt {
+        font-size: 1.5em;
+    }
+
+    .aboutRight dd {
+        text-align: right;
     }
 
     /* /Aboutme 영역 */
