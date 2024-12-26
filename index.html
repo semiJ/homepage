@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>전세미 개인홈페이지</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.transform2d.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <link rel="icon" type="image/ico" href="img/header/HomepageLogo.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">
+                <span class="h_hide">전세미 개인 홈페이지 로고</span>
+                <img src="img/header/mainlogo.svg" alt="메인로고">
+            </a>
+        </h1>
+        <nav>
+            <ul class="mainMenu">
+                <li><a href="#">Welcome</a></li>
+                <li><a href="#">Aboutme</a></li>
+                <li><a href="#">Coding</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Content</a></li>
+            </ul>
+            <ul class="menuBar">
+                <li class="bar01"><span class="h_hide">메뉴상단</span></li>
+                <li class="bar02"><span class="h_hide">메뉴중간</span></li>
+                <li class="bar03"><span class="h_hide">메뉴하단</span></li>
+            </ul>
+            <div class="subBack">
+                <ul class="subMenu">
+                    <li><a href="#">Welcome</a></li>
+                    <li><a href="#">Aboutme</a></li>
+                    <li><a href="#">Coding</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Content</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome">
+            <h2 class="h_hide">welcome영역</h2>
+            <ul class="welDetail">
+                <li class="welLeft">
+                    <div>
+                        <h3>
+                            JEON SE MI
+                        </h3>
+                        <p>PORTFOLIO</p>
+                    </div>
+                </li>
+                <li class="welRight">
+                    <div>
+                        <ul class="welAll">
+                            <li class="welTop">
+                                <ul>
+                                    <li>
+                                        <ul class="welTopDetail">
+                                            <li class="welProfile">
+                                                <img src="img/section/semi.jpg" alt="세미사진">
+                                            </li>
+                                            <li>
+                                                <p>j_950404</p>
+                                                <p>Web Publisher</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="welMiddle">
+                                <img src="img/section/semi.jpg" alt="세미사진">
+                            </li>
+                            <li class="welBottom">
+                                <ul>
+                                    <li>
+                                        <ul class="welBottomTop">
+                                            <li>
+                                                <i class="fa-solid fa-heart heart"></i>
+                                                <i class="fa-regular fa-comment"></i>
+                                                <i class="fa-regular fa-paper-plane"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa-regular fa-bookmark bkm"></i>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            안녕하세요 기획하는 퍼블리셔 전세미입니다.<br>
+                                            맡은 일에 최선을 다하고,<br>
+                                            항상 노력하는 사람이 되겠습니다.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span>#책임감</span>
+                                        <span>#초심</span>
+                                        <span>#노력</span>
+                                    </li>
+                                    <li>
+                                        <span>#기획</span>
+                                        <span>#디자인</span>
+                                        <span>#퍼블리싱</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="aboutme">
+            <h2>
+                <span>A</span>
+                <span>b</span>
+                <span>o</span>
+                <span>u</span>
+                <span>t</span>
+                <span>m</span>
+                <span>e</span>
+            </h2>
+            <ul>
+                <li class="aboutLeft">
+                    <div class="card flip">
+                        <div class="aboutFront">
+                            <ul class="aboutprofile">
+                                <li>전세미</li>
+                                <li>950404</li>
+                                <li>ENTP</li>
+                            </ul>
+                        </div>
+                        <div class="aboutBack">back</div>
+                    </div>
+                </li>
+                <li class="aboutRight">
+                    <dl>
+                        <dt>이름</dt>
+                        <dd>전세미</dd>
+                    </dl>
+                    <dl>
+                        <dt>생년월일</dt>
+                        <dd>19950404</dd>
+                    </dl>
+                    <dl>
+                        <dt>수료내역</dt>
+                        <dd>2024.07 ~ 2024.12 MBC아카데미 웹디자인&퍼블리싱 과정 수료</dd>
+                    </dl>
+                    <dl>
+                        <dt>경력</dt>
+                        <dd>
+                            <ul class="career">
+                                <li>
+                                    <p class="period">2017.01 ~ 2018.01</p>
+                                    <p class="team">(주) 모닝인 [띵동] cs 운영팀</p> 
+                                </li>
+                                <li>
+                                    <p class="period">2018.01 ~ 2020.12</p>
+                                    <p class="team">(주) 허니비즈 [띵동] cs 운영팀</p>
+                                    <p class="team">(주) 허니비즈 [띵동] 사내 프로그램 (TMS) 기획 및 PM 개발팀 (2019.09 직무변경)</p>
+                                </li>
+                                <li>
+                                    <p class="period">2021.08 ~ 2024.03</p>
+                                    <p class="team">(주) 더파이러츠 [인어교주해적단] UX/UI 기획 개발본부 기획팀</p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </section>
+        <section id="coding">
+            <h2>Coding</h2>
+        </section>
+        <section id="design">
+            <h2>Design</h2>
+        </section>
+        <section id="content">
+            <h2>content</h2>
+        </section>
+    </main>
+
+    <footer></footer>
+</body>
+</html>

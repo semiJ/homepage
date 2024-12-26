@@ -1,0 +1,67 @@
+/* reset */
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ul,
+li,
+dl,
+dd,
+dt {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+html {
+    font-family: 'Gyeonggi_Title_Medium';
+    width: 100%;
+}
+
+header, section, footer {
+    overflow: hidden;
+}
+
+/* 보이지 않아도 되는 글자들 <span 또는 h2>숨기기 */
+html .h_hide {
+    display: none;
+}
+
+@media all and (min-width:1024px){
+    html {
+        font-size: 18px;
+    }
+}
+
+@media all and (min-width:768px){
+    html {
+        font-size: 16px;
+    }
+}
+
+@media all and (min-width:480px){
+    html {
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width:479px){
+    html {
+        font-size: 12px;
+    }
+}
+
+/* 경기천년제목체 */
+@font-face {
+    font-family: 'Gyeonggi_Title_Medium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Title_Medium.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
