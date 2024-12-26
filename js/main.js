@@ -10,13 +10,13 @@ $(function(){
     // header 영역  
     let baseline = -600;
     
-    let header = $("header").offset().top + baseline;
-    let welcome = $("#welcome").offset().top + baseline;
-    let aboutme = $("#aboutme").offset().top;
-    let coding = $("#coding").offset().top + baseline;
-    let aiDesign = $("#design").offset().top + baseline;
-    let content = $("#content").offset().top + baseline;
-    let footer = $("footer").offset().top + baseline;
+    let header = $("header").offset().top;
+    let welcome = $("#welcome").offset().top;
+    let aboutme = $("#aboutme").offset().top - 100;
+    let coding = $("#coding").offset().top;
+    let aiDesign = $("#design").offset().top;
+    let content = $("#content").offset().top;
+    let footer = $("footer").offset().top;
 
     $(window).on("scroll", function(){
         let sc = $(this).scrollTop();
@@ -43,6 +43,16 @@ $(function(){
         let target = $("main section").eq(i).offset().top;
         
         $("html, body").stop().animate({scrollTop: target}, 1200);
+    });
+
+    $(window).on("scroll", function(){
+        let sc = $(this).scrollTop();
+
+        if(sc > aboutme) {
+            $(".aboutRight").addClass("onAbout");
+        } else {
+            $(".aboutRightr").removeClass("onAbout");
+        };
     });
 
 })

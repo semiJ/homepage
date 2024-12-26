@@ -109,6 +109,7 @@
         width: 100%;
         height: 100vh;
         position: relative;
+        overflow: hidden;
     }
     
     .welDetail {
@@ -353,6 +354,7 @@
         height: 100vh;
         padding: 4em;
         box-sizing: border-box;
+        overflow: hidden;
     }
 
     #aboutme h2 {
@@ -410,7 +412,6 @@
         height: 70vh;
         /* background-color: #72cbff; */
         margin: 0px auto;
-
         display: flex;
         justify-content: center;
         gap: 10%;
@@ -420,20 +421,36 @@
         width: 40%;
         height: 100%;
         perspective: 900px;
+        position: relative;
     }
 
     .card {
         width: 100%;
         height: 100%;
-        min-height: 540px;
+        min-height: 600px;
         position: relative;
         transform-style: preserve-3d;
         transition: 3s;
+
+        animation: moveCard 5s ease-in-out infinite;
     }
 
-    /* hover 시 애니메이션 멈춤 */
-    .flip:hover {
-        transform: rotateY(180deg);
+    @keyframes moveCard {
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        50% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: rotateY(0deg);
+        }
+    }
+
+    .card:hover {
+        animation-play-state: paused;
     }
 
     .aboutFront {
@@ -484,13 +501,50 @@
 
     .aboutBack .aboutmeSkill li {
         width: 80%;
-        margin: 10px auto;
+        margin: 30px auto;
         background-color: var(--main_color03);
         color: var(--main_color01);
         text-align: center;
         padding: 10px;
         box-sizing: border-box;
         position: relative;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    .aboutBack .aboutmeSkill li .program {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .aboutBack .aboutmeSkill .Skillbar {
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        border-radius: 20px;
+    }
+
+    .aboutmeSkill .ninety{
+        width: 90%;
+        transition: 1s;
+        background-color: var(--main_color08);
+    }
+
+    .aboutmeSkill .eighty{
+        width: 80%;
+        transition: 1s;
+        background-color: var(--main_color08);
+    }
+
+    .aboutmeSkill .seventy{
+        width: 70%;
+        transition: 1s;
+        background-color: var(--main_color08);
     }
 
     .aboutRight {
@@ -499,10 +553,19 @@
         padding: 2.5em;
         box-sizing: border-box;
         line-height: 40px;
+        opacity: 0;
+        transform: translateX(700px);
+    }
+
+    .aboutRight.onAbout {
+        opacity: 1;
+        transform: translateX(0px);
+        transition: 2s;
     }
 
     .aboutRight dt {
         font-size: 1.5em;
+        color: var(--main_color07);
     }
 
     .aboutRight dd {
@@ -510,6 +573,13 @@
     }
 
     /* /Aboutme 영역 */
+
+    /* coding 영역 */
+    #coding {
+        width: 100%;
+        height: 100vh;
+    }
+    /* /coding 영역 */
 
 }
 
@@ -620,9 +690,11 @@
     /* welLeft 영역 */
 
     .welDetail .welLeft {
-        width: 60%;
-        position: relative;
+        width: 100%;
+        height: 100%;
+        position: absolute;
         overflow: hidden;
+        z-index: 10;
     }
 
     .welDetail .welLeft div {
@@ -635,7 +707,7 @@
     }
 
     .welDetail .welLeft h3 {
-        font-size: 6em;
+        font-size: 4em;
         text-align: center;
         background: linear-gradient(90deg, rgb(0, 162, 255) 20%, rgb(153, 0, 255) 80%);
         color: transparent;
@@ -710,7 +782,7 @@
     /* welRight 영역 */
 
     .welDetail .welRight {
-        width: 40%;
+        width: 100%;
         position: relative;
         overflow: hidden;
     }
@@ -838,12 +910,17 @@
     .heart {
         color: #f00;
     }
-
-    
-
     /* /welRight 영역 */
     
     /* /welcome section */
+
+    /* Aboutme 영역 */
+    #aboutme {
+        width: 100%;
+        height: 100vh;
+    }
+
+    /* /Aboutme 영역 */
 }
 
 @media all and (min-width:480px) and (max-width:767px) {
