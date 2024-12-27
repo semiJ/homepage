@@ -48,7 +48,7 @@ $(function(){
     $(window).on("scroll", function(){
         let sc = $(this).scrollTop();
 
-        if(sc > aboutme) {
+        if(sc >= aboutme || sc > coding) {
             $(".aboutRight").addClass("onAbout");
         } else {
             $(".aboutRightr").removeClass("onAbout");
