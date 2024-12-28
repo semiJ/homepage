@@ -45,6 +45,7 @@ $(function(){
         $("html, body").stop().animate({scrollTop: target}, 1200);
     });
 
+    // aboutme 영역
     $(window).on("scroll", function(){
         let sc = $(this).scrollTop();
 
@@ -55,4 +56,22 @@ $(function(){
         };
     });
 
+    //coding 영역
+
+    //design 영역
+    // aiDesign
+
+    let moveCard = gsap.utils.toArray("#design .moveCard li");
+    
+    gsap.to(moveCard,{
+        xPercent: -100 * (moveCard.length - 5) ,
+        scrollTrigger:{
+            trigger: "#design",
+            pin: true,
+            scrub: 4,
+            start : "center center",
+            end :"200%",
+            markers : false,
+        },
+    });
 })

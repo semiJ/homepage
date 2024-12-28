@@ -588,17 +588,6 @@
         margin-top: 0.8em;
     }
 
-    h2 span {
-        background: linear-gradient(90deg, #72cbff 20%, #a74ae4 80%);
-        color: transparent;
-        background-clip: text;
-        background-size: 200%;
-        display: inline-block;
-        animation: 
-            moveLetter 1s ease-in-out infinite,
-            moveLetterCra 1s linear infinite;
-    }
-
     .codingDetail {
         width: 80%;
         height: 50vh;
@@ -686,9 +675,9 @@
     #design {
         width: 100%;
         height: 100vh;
+        min-height: 700px;
         padding: 4em;
         box-sizing: border-box;
-        overflow: hidden;
         position: relative;
     }
 
@@ -697,18 +686,77 @@
         font-size: 5em;
         margin-top: 0.8em;
     }
-
-    h2 span {
-        background: linear-gradient(90deg, #72cbff 20%, #a74ae4 80%);
-        color: transparent;
-        background-clip: text;
-        background-size: 200%;
-        display: inline-block;
-        animation: 
-            moveLetter 1s ease-in-out infinite,
-            moveLetterCra 1s linear infinite;
+    
+    #design .moveCard {
+        display: flex;
+        margin: 7em 2em;
     }
+    
+    #design .moveCard li {
+        width: 300px;
+        height: 400px;
+        padding: 0px 30px;
+        box-sizing: border-box;
+        flex-shrink: 0;
+    }
+
+    #design .moveCard img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    #design .moveCard .comingSoon {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    #design .comingSoon::after {
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-image: url(./../img/section/designBtnicon.svg);
+        background-repeat: no-repeat;
+        background-size: 100px;
+        background-position: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: 0.5s;
+    }
+    
+    #design .comingSoon:hover::after {
+        opacity: 0.5;
+    }
+    
+    #design .comingSoon:hover img {
+        transform: scale(0.9);
+        filter: brightness(0.5);
+    }
+
     /* /design 영역 */
+
+    /* content 영역 */
+
+    #content {
+        width: 100%;
+        height: 100vh;
+        min-height: 700px;
+        padding: 4em;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    #content h2 {
+        font-size: 5em;
+        margin-top: 0.8em;
+    }
+
+    /* /content 영역 */
 
 }
 
