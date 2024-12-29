@@ -593,7 +593,7 @@
         height: 50vh;
         min-height: 700px;
         margin: 0px auto;
-        background-color: var(--main_color02);
+        background-color: var(--main_color03);
         border-radius: 20px;
         position: relative;
         padding: 2em 0px;
@@ -602,11 +602,19 @@
 
     .codingDetail > li {
         width: 100%;
-        height: 100%;
+        height: 80%;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        padding: 3em 6em;
+        box-sizing: border-box;
+        opacity: 0;
+    }
+
+    .codingDetail li.view {
+        opacity: 1;
+        transition: 2s;
     }
 
     .codingCon {
@@ -622,6 +630,43 @@
 
     .codingCon .codingMockup img {
         width: 40em;
+    }
+
+    .codingConDetail {
+        line-height: 2.6em;
+        margin-left: 5em;
+        background-color: var(--main_color04);
+        border-radius: 20px;
+        padding: 1.5em 3em;
+        box-sizing: border-box;
+        color: var(--main_color01);
+    }
+
+    .codingConDetail h3 {
+        font-size: 2em;
+    }
+    
+    .codingConDetail dt {
+        font-size: 1.5em;
+    }
+
+    .codingBtn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .codingBtn li {
+        width: 100%;
+        background-color: var(--main_color05);
+        margin: 0px 0.5em;
+        border-radius: 5px;
+    }
+
+    .codingBtn li a {
+        display: block;
+        width: 100%;
+        text-align: center;
     }
 
     /* codingDetail navi */
@@ -650,25 +695,6 @@
         border-radius: 30px;
     }
 
-    /* 앞뒤버튼 */
-    #coding > a{
-        display: block;
-        z-index:30;
-        position:absolute;
-        top:55%;
-    }
-
-    .bnprev{
-        font-size: 3rem;
-        left:100px;
-        color: var(--main_color04);
-    }
-
-    .bnnext{
-        font-size: 3rem;
-        right:100px;
-        color: var(--main_color04);
-    }
     /* /coding 영역 */
 
     /* design 영역 */

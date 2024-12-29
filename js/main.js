@@ -56,7 +56,53 @@ $(function(){
         };
     });
 
-    //coding 영역
+    //coding 자동 슬라이드
+
+    let panel = document.querySelectorAll(".codingDetail > li"), 
+    bnnavi = document.querySelectorAll(".codingDetailnavi li"),
+    bnprev = document.querySelector(".bnprev"),
+    bnnext = document.querySelector(".bnnext");
+    
+    let total = panel.length - 1;
+    
+    let i = 0;
+
+    function style(){
+        for(let reItem of panel){
+            reItem.classList.remove("view");
+        }
+        for(let againItem of bnnavi){
+        againItem.classList.remove("bnlist");
+        }
+
+        panel[i].classList.add("view");
+        bnnavi[i].classList.add("bnlist");
+    }
+    
+    function slide(){
+        start = setInterval(function(){
+            if(i == total){
+                i = 0;
+            } else{
+                i++;
+            }
+            style();
+        }, 3000)
+    }
+
+    slide();
+
+    // 네비 버튼
+    bnnavi.forEach(function (item, index) {
+        item.addEventListener("click",() => {
+            clearInterval(start);
+
+            i = index;
+            
+            style();
+            slide();
+        });
+    })
 
     //design 영역
     // aiDesign
