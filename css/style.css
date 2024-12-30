@@ -607,7 +607,7 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        padding: 3em 6em;
+        padding: 3em 4em;
         box-sizing: border-box;
         opacity: 0;
     }
@@ -621,7 +621,6 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        gap: 20px;
     }
 
     .codingCon > li {
@@ -629,12 +628,11 @@
     }
 
     .codingCon .codingMockup img {
-        width: 40em;
+        width: 30em;
     }
 
     .codingConDetail {
         line-height: 2.6em;
-        margin-left: 5em;
         background-color: var(--main_color04);
         border-radius: 20px;
         padding: 1.5em 3em;
