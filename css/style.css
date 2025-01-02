@@ -602,6 +602,7 @@
         position: relative;
         padding: 2em 0px;
         box-sizing: border-box;
+        background-color: var(--main_color02);
     }
 
     .codingDetail > li {
