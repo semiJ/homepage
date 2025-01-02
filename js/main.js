@@ -120,4 +120,20 @@ $(function(){
             markers : false,
         },
     });
+
+    //content
+   
+    
+
+    //footer
+    $(window).on("scroll", function(){
+        let viewTop = $(this).scrollTop();
+        // console.log(viewTop);
+
+        if(viewTop >= aboutme) {
+            $(".topBtn").addClass("ftTopbtn");
+        } else {
+            $(".topBtn").removeClass("ftTopbtn");
+        };
+    });
 })

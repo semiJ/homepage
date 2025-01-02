@@ -563,12 +563,18 @@
     }
 
     .aboutRight dt {
-        font-size: 1.5em;
+        font-size: 2em;
         color: var(--main_color07);
+        margin: 1.3em 0px;
     }
 
     .aboutRight dd {
         text-align: right;
+        font-size: 1.3em;
+    }
+
+    .career li {
+        margin: 1.2em 0px;
     }
 
     /* /Aboutme 영역 */
@@ -585,14 +591,13 @@
 
     #coding h2 {
         font-size: 5em;
-        margin-top: 0.8em;
+        margin-top: 0.5em;
     }
 
     .codingDetail {
         width: 80%;
         min-height: 700px;
         margin: 0px auto;
-        background-color: var(--main_color02);
         border-radius: 20px;
         position: relative;
         padding: 2em 0px;
@@ -654,7 +659,7 @@
 
     .codingBtn li {
         width: 100%;
-        background-color: var(--main_color05);
+        background-color: RGB(255, 165, 0);
         margin: 0px 0.5em;
         border-radius: 5px;
     }
@@ -778,26 +783,111 @@
         margin-top: 0.8em;
     }
 
-    .conti {
+    .contiInfo {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        transform: translate(-50%, -30%);
+    }
+
+    .contiInfo dl {
+        background-color: var(--main_color02);
+        color: var(--main_color07);
+        padding: 2em 4em;
+        border-radius: 15px;
+
+        animation: conMove 2s ease-in-out infinite;
+    }
+
+    dl:nth-child(1) { animation-delay: 0.2s; }
+    dl:nth-child(2) { animation-delay: 0.6s; }
+    dl:nth-child(3) { animation-delay: 1s; }
+
+    @keyframes conMove {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(30px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    .contiInfo dt {
+        font-size: 1.4em;
+        margin-bottom: 0.5em;
+    }
+
+    .contiImg {
         position: absolute;
         left: 50%;
         top: 70%;
         transform: translate(-50%, -50%);
     }
 
-    .conInfo {
+    /* /content 영역 */
+
+    /* footer */
+    footer {
+        width: 100%;
+        height: 30vh;
+        background-color: var(--main_color02);
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .ftContact {
+        margin: 0px auto;
+    }
+
+    .ftCopy {
+        width: 100%;
+        height: 20%;
+        padding: 1.2rem;
+        box-sizing: border-box;
+        text-align: center;
+        color: var(--main_color01);
+        margin: 0px auto;
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+
+    .topBtn {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        opacity: 0;
+        z-index: 50;
+        font-size: 1.8rem;
+    }
+
+    .ftTopbtn {
+        opacity: 1;
+        transition: opacity 0.8s ease;
+    }
+
+    .topBtn a {
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: var(--main_color01);
+        border: 1px solid var(--dark_gray);
         display: flex;
         justify-content: center;
-        gap: 20px;
-        /* background-color: #72cbff; */
+        align-items: center;
+        text-align: center;
     }
 
-    .conInfo dt {
-        font-size: 1.5em;
-        margin-bottom: 0.5em;
-    }
-
-    /* /content 영역 */
+    /* /footer */
 
 }
 
