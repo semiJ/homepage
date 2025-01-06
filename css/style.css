@@ -733,6 +733,38 @@
         height: 100%;
         object-fit: cover;
     }
+
+    #design .moveCard .designDetail {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    #design .designDetail::after {
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-image: url(./../img/section/designBtnicon.svg);
+        background-repeat: no-repeat;
+        background-size: 100px;
+        background-position: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: 0.5s;
+    }
+    
+    #design .designDetail:hover::after {
+        opacity: 0.5;
+    }
+    
+    #design .designDetail:hover img {
+        transform: scale(0.9);
+        filter: brightness(0.5);
+    }
     
     #design .moveCard .comingSoon {
         width: 100%;
