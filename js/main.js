@@ -59,9 +59,7 @@ $(function(){
     //coding 자동 슬라이드
 
     let panel = document.querySelectorAll(".codingDetail > li"), 
-    bnnavi = document.querySelectorAll(".codingDetailnavi li"),
-    bnprev = document.querySelector(".bnprev"),
-    bnnext = document.querySelector(".bnnext");
+    bnnavi = document.querySelectorAll(".codingDetailnavi li");
     
     let total = panel.length - 1;
     
@@ -87,7 +85,7 @@ $(function(){
                 i++;
             }
             style();
-        }, 3000)
+        }, 4000)
     }
 
     slide();

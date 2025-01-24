@@ -605,7 +605,7 @@
         background-color: var(--main_color02);
     }
 
-    .codingDetail > li {
+    .codingDetail .codingDtl {
         width: 100%;
         position: absolute;
         left: 50%;
@@ -616,14 +616,19 @@
         opacity: 0;
     }
 
-    .codingDetail li.view {
+    .codingDetail li:nth-child(1) {
         opacity: 1;
-        transition: 2s;
+    }
+
+    .codingDetail .codingDtl.view {
+        opacity: 1;
+        transition: 1s;
     }
 
     .codingCon {
         width: 100%;
         display: flex;
+        gap: 10px;
         justify-content: center;
     }
 
@@ -633,7 +638,7 @@
     }
 
     .codingCon .codingMockup img {
-        width: 30em;
+        width: 100%;
         position: absolute;
         left: 50%;
         top: 50%;
