@@ -12,9 +12,8 @@ $(function(){
     
     let header = $("header").offset().top;
     let welcome = $("#welcome").offset().top;
-    let aboutme = $("#aboutme").offset().top - 100;
+    let aboutme = $("#aboutme").offset().top - 200;
     let coding = $("#coding").offset().top;
-    let aiDesign = $("#design").offset().top;
     let content = $("#content").offset().top;
     let footer = $("footer").offset().top;
 
@@ -49,7 +48,7 @@ $(function(){
     $(window).on("scroll", function(){
         let sc = $(this).scrollTop();
 
-        if(sc >= aboutme || sc > coding) {
+        if(sc >= aboutme) {
             $(".aboutRight").addClass("onAbout");
         } else {
             $(".aboutRightr").removeClass("onAbout");
@@ -101,28 +100,7 @@ $(function(){
             slide();
         });
     })
-
-    //design 영역
-    // aiDesign
-
-    let moveCard = gsap.utils.toArray("#design .moveCard li");
     
-    gsap.to(moveCard,{
-        xPercent: -100 * (moveCard.length - 5) ,
-        scrollTrigger:{
-            trigger: "#design",
-            pin: true,
-            scrub: 4,
-            start : "center center",
-            end :"200%",
-            markers : false,
-        },
-    });
-
-    //content
-   
-    
-
     //footer
     $(window).on("scroll", function(){
         let viewTop = $(this).scrollTop();

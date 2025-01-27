@@ -113,7 +113,7 @@
     }
     
     .welDetail {
-        width: 80%;
+        width: 1200px;
         height: 80vh;
         display: flex;
         justify-content: center;
@@ -126,7 +126,7 @@
     /* welLeft 영역 */
 
     .welDetail .welLeft {
-        width: 65%;
+        width: 750px;
         position: relative;
         overflow: hidden;
     }
@@ -176,7 +176,9 @@
     }
 
     .welDetail .welLeft p {
-        font-size: 2em;
+        padding: 0px 40px;
+        box-sizing: border-box;
+        font-size: 3em;
         color: var(--main_color04);
         text-align: right;
         background: linear-gradient(150deg, rgb(153, 0, 255) 80%, rgb(238, 213, 255) 20%);
@@ -216,7 +218,7 @@
     /* welRight 영역 */
 
     .welDetail .welRight {
-        width: 35%;
+        width: 450px;
         position: relative;
         overflow: hidden;
     }
@@ -330,11 +332,21 @@
         margin-bottom: 0.8em;
     }
 
+    .welDetail .welRight div .welAll .welBottom .welBottomdtl {
+        padding: 20px 0px;
+        box-sizing: border-box;
+    }
+
     .welBottomTop {
         width: 100%;
         display: flex;
         justify-content: space-between;
         font-size: 1.5rem;
+    }
+
+    .welBottomTop li:nth-child(1) i {
+        padding: 0px 5px;
+        box-sizing: border-box;
     }
 
     .welBottomTop li:nth-child(2) {
@@ -355,12 +367,14 @@
         padding: 4em;
         box-sizing: border-box;
         overflow: hidden;
+        position: relative;
     }
 
     #aboutme h2 {
         text-align: right;
         font-size: 5em;
-        margin-top: 0.8em;
+        margin-top: 50px;
+        padding-right: 120px;
     }
 
     h2 span {
@@ -407,20 +421,20 @@
     }
 
     #aboutme > ul {
-        width: 80%;
-        height: 70vh;
-        /* background-color: #72cbff; */
+        width: 1200px;
         margin: 0px auto;
         display: flex;
         justify-content: center;
         gap: 10%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .aboutLeft {
-        width: 40%;
-        height: 100%;
+        width: 450px;
         perspective: 900px;
-        position: relative;
     }
 
     .card {
@@ -456,7 +470,7 @@
         width: 100%;
         height: 100%;
         color: #fff;
-        background: url(./../img/section/semi.jpg);
+        background: url(./../img/section/semi2.jpeg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -547,7 +561,7 @@
     }
 
     .aboutRight {
-        width: 60%;
+        width: 750px;
         height: 100%;
         padding: 2.5em;
         box-sizing: border-box;
@@ -590,19 +604,25 @@
     }
 
     #coding h2 {
+        text-align: left;
         font-size: 5em;
-        margin-top: 0.5em;
+        margin-top: 50px;
+        padding-left: 130px;
     }
 
     .codingDetail {
-        width: 80%;
-        min-height: 700px;
-        margin: 0px auto;
+        width: 1200px;
+        min-height: 600px;
+        margin: 80px auto;
         border-radius: 20px;
         position: relative;
         padding: 2em 0px;
         box-sizing: border-box;
         background-color: var(--main_color02);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .codingDetail .codingDtl {
@@ -708,107 +728,6 @@
     }
 
     /* /coding 영역 */
-
-    /* design 영역 */
-    #design {
-        width: 100%;
-        height: 100vh;
-        min-height: 700px;
-        padding: 4em;
-        box-sizing: border-box;
-        position: relative;
-    }
-
-    #design h2 {
-        text-align: right;
-        font-size: 5em;
-        margin-top: 0.8em;
-    }
-    
-    #design .moveCard {
-        display: flex;
-        margin: 7em 2em;
-    }
-    
-    #design .moveCard li {
-        width: 300px;
-        height: 400px;
-        padding: 0px 30px;
-        box-sizing: border-box;
-        flex-shrink: 0;
-    }
-
-    #design .moveCard img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    #design .moveCard .designDetail {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-    }
-    
-    #design .designDetail::after {
-        width: 100%;
-        height: 100%;
-        content: "";
-        background-image: url(./../img/section/designBtnicon.svg);
-        background-repeat: no-repeat;
-        background-size: 100px;
-        background-position: center;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0;
-        transition: 0.5s;
-    }
-    
-    #design .designDetail:hover::after {
-        opacity: 0.5;
-    }
-    
-    #design .designDetail:hover img {
-        transform: scale(0.9);
-        filter: brightness(0.5);
-    }
-    
-    #design .moveCard .comingSoon {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-    }
-    
-    #design .comingSoon::after {
-        width: 100%;
-        height: 100%;
-        content: "";
-        background-image: url(./../img/section/designBtnicon.svg);
-        background-repeat: no-repeat;
-        background-size: 100px;
-        background-position: center;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0;
-        transition: 0.5s;
-    }
-    
-    #design .comingSoon:hover::after {
-        opacity: 0.5;
-    }
-    
-    #design .comingSoon:hover img {
-        transform: scale(0.9);
-        filter: brightness(0.5);
-    }
-
-    /* /design 영역 */
 
     /* content 영역 */
 
