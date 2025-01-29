@@ -491,9 +491,9 @@
         width: 100%;
         display: flex;
         justify-content: space-around;
-        color: var(--main_color01);
+        color: var(--white_gray);
         font-size: 1.5em;
-        transform: translateY(-280px);
+        transform: translateY(280px);
     }
 
     .aboutBack {
@@ -601,6 +601,7 @@
         box-sizing: border-box;
         overflow: hidden;
         position: relative;
+        background-color: var(--main_color02);
     }
 
     #coding h2 {
@@ -612,13 +613,14 @@
 
     .codingDetail {
         width: 1200px;
+        height: 70%;
         min-height: 500px;
         margin: 80px auto;
         border-radius: 20px;
         position: relative;
         padding: 2em 0px;
         box-sizing: border-box;
-        background-color: var(--main_color02);
+        background-color: #fff;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -725,6 +727,27 @@
         width: 2rem;
         background-color: var(--main_color05);
         border-radius: 30px;
+    }
+
+    #coding > a{
+        display: block;
+        z-index:30;
+        position:absolute;
+        top: 530px;
+        padding: 0.8rem 1.2rem;
+        background-color: #00a2ff;
+    }
+
+    #coding .bnprev{
+        font-size: 2.5rem;
+        left: 220px;
+        color: var(--main_color04);
+    }
+
+    #coding .bnnext{
+        font-size: 2.5rem;
+        right: 220px;
+        color: var(--main_color04);
     }
 
     /* /coding 영역 */

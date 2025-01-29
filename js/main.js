@@ -8,11 +8,11 @@ $(function(){
     gsap.registerPlugin(ScrollTrigger);
 
     // header 영역  
-    let baseline = -600;
+    let baseline = -200;
     
     let header = $("header").offset().top;
     let welcome = $("#welcome").offset().top;
-    let aboutme = $("#aboutme").offset().top - 200;
+    let aboutme = $("#aboutme").offset().top + baseline;
     let coding = $("#coding").offset().top;
     let content = $("#content").offset().top;
     let footer = $("footer").offset().top;
@@ -58,7 +58,9 @@ $(function(){
     //coding 자동 슬라이드
 
     let panel = document.querySelectorAll(".codingDetail > li"), 
-    bnnavi = document.querySelectorAll(".codingDetailnavi li");
+    bnnavi = document.querySelectorAll(".codingDetailnavi li"),
+    bnprev = document.querySelector("#coding .bnprev"),
+    bnnext = document.querySelector("#coding .bnnext");
     
     let total = panel.length - 1;
     
@@ -84,10 +86,37 @@ $(function(){
                 i++;
             }
             style();
-        }, 4000)
-    }
+        }, 3000)
+    };
 
     slide();
+
+    // 다음, 이전 버튼
+    bnnext.addEventListener("click", function() {
+        clearInterval(start);
+        if(i == total){
+            i = 0;
+        } else{
+            i++;
+        }
+
+        style();
+        slide();
+
+    });
+    
+    bnprev.addEventListener("click", function() {
+        clearInterval(start);
+        if(i == 0){
+            i = total;
+        } else {
+            i = --i;
+        }
+
+        style();
+        slide();
+
+    });
 
     // 네비 버튼
     bnnavi.forEach(function (item, index) {
@@ -99,7 +128,7 @@ $(function(){
             style();
             slide();
         });
-    })
+    });
     
     //footer
     $(window).on("scroll", function(){
