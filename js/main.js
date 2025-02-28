@@ -59,8 +59,8 @@ $(function(){
 
     let panel = document.querySelectorAll(".codingDetail > li"), 
     bnnavi = document.querySelectorAll(".codingDetailnavi li"),
-    bnprev = document.querySelector("#coding .bnprev"),
-    bnnext = document.querySelector("#coding .bnnext");
+    bnprev = document.querySelector(".bnprev"),
+    bnnext = document.querySelector(".bnnext");
     
     let total = panel.length - 1;
     
