@@ -18,9 +18,10 @@
    --dark_gray : #333333;
 }
 
+/* PC , 테블릿 가로 (해상도 768px ~ 1023px)*/
 @media all and (min-width:1024px) {
-     /* header */
-     header {
+    /* header */
+    header {
         background-color: transparent;
         width: 100%;
         padding: 0.8rem;
@@ -881,17 +882,2599 @@
     }
 
     /* /footer */
-
 }
 
-@media all and (min-width:768px){
+@media all and (min-width:768px) and (max-width:1023px) {
+    /* header */
+    header {
+        background-color: transparent;
+        width: 100%;
+        padding: 0.8rem;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        z-index: 100;
+        opacity: 1;
+        box-sizing: border-box;
+    }
+
+    h1 img {
+        width: 3em;
+        margin-top: 1.2rem;
+    }
     
+    header:hover {
+        background-color: var(--main_color02);
+    }
+
+    /* header scroll event */
+
+    .on {
+        width: 100%;
+        height: 80px;
+        padding: 0.6rem;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        transition: 1s;
+        opacity: 1;
+    }
+
+    /* mainMenu 메인메뉴 스타일 */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+    }
+
+    .mainMenu {
+        display: flex;
+    }
+
+    .mainMenu li {
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+    }
+
+    .mainMenu a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        font-weight: bold;
+        color: var(--main_color04);
+        font-size: 1.2rem;
+        padding: 0px 2em;
+        box-sizing: border-box;
+    }
+
+    .mainMenu a:hover {
+        color: var(--main_color07);
+    }
+
+    /* subMenu 서브메뉴 스타일*/
+    .subBack {
+        display: none;
+    }
+
+    .subMenu {
+        display: none;
+    }
+
+    /* menuBar 서브메뉴 bar */
+    .menuBar {
+        display: none;
+    }
+
+    /* main 영역 */
+    /* welcome section */
+    #welcome {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .welDetail {
+        width: 1200px;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* welLeft 영역 */
+
+    .welDetail .welLeft {
+        width: 750px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .welDetail .welLeft div {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        /* opacity: 0; */
+    }
+
+    .welDetail .welLeft h3 {
+        font-size: 8em;
+        text-align: center;
+        background: linear-gradient(90deg, #00a2ff 20%, #9900ff 80%);
+        color: transparent;
+        background-clip: text;
+        background-size: 150%;
+    
+        animation: 
+            moveToLeft 2s ease-out forwards,
+            moveGradient 2s linear infinite;
+    }
+    
+    @keyframes moveToLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-500px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes moveGradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        100% {
+            background-position: 100% 50%;
+        }
+    }
+
+    .welDetail .welLeft p {
+        padding: 0px 40px;
+        box-sizing: border-box;
+        font-size: 3em;
+        color: var(--main_color04);
+        text-align: right;
+        background: linear-gradient(150deg, rgb(153, 0, 255) 80%, rgb(238, 213, 255) 20%);
+        color: transparent;
+        background-clip: text;
+        background-size: 150%;
+    
+        animation: 
+            moveToRight 2s ease-out forwards,
+            moveGra 2s linear infinite;
+    }
+    
+    @keyframes moveToRight {
+        0% {
+            transform: translateX(200px);
+            opacity: 0;
+        };
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        };
+    }
+
+    @keyframes moveGra {
+        0% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    /* /welLeft 영역 */
+
+    /* welRight 영역 */
+
+    .welDetail .welRight {
+        width: 450px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .welDetail .welRight div {
+        width: 90%;
+        height: 70%;
+        min-height: 650px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+    }
+
+    .welDetail .welRight div .welAll {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        border: 5px solid var(--main_color03);
+        overflow: hidden;
+        position: relative;
+
+        animation: moveWelAll 1s ease-out forwards;
+    }
+
+    @keyframes moveWelAll {
+        0% {
+            transform: translateY(500px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+
+    .welDetail .welRight div .welAll .welTop {
+        width: 100%;
+        height: 15%;
+        overflow: hidden;
+        padding: 1.2em;
+        box-sizing: border-box;
+    }
+
+    .welDetail .welRight div .welAll .welTop > ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .welDetail .welRight div .welAll .welTop > ul > li:nth-child(2) {
+        text-align: right;
+        font-size: 1.5em;
+        margin-top: 0.7em;
+    }
+
+    .welTopDetail {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .welTopDetail .welProfile {
+        width: 50px;
+        height: 50px;
+    }
+
+    .welTopDetail img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .welTopDetail li:nth-child(2) {
+        margin-left: 0.8em;
+    }
+
+    .welTopDetail li:nth-child(2) p {
+        width: 100%;
+        margin-top: 0.5em;
+    }
+
+    .welDetail .welRight div .welAll .welMiddle {
+        width: 100%;
+        height: 55%;
+        overflow: hidden;
+    }
+
+    .welDetail .welRight div .welAll .welMiddle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .welDetail .welRight div .welAll .welBottom {
+        width: 100%;
+        height: 30%;
+        padding: 1.2em;
+        box-sizing: border-box;
+    }
+
+    .welDetail .welRight div .welAll .welBottom > ul {
+        width: 100%;
+    }
+
+    .welDetail .welRight div .welAll .welBottom > ul > li {
+        width: 100%;
+        margin-bottom: 0.8em;
+    }
+
+    .welDetail .welRight div .welAll .welBottom .welBottomdtl {
+        padding: 20px 0px;
+        box-sizing: border-box;
+    }
+
+    .welBottomTop {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.5rem;
+    }
+
+    .welBottomTop li:nth-child(1) i {
+        padding: 0px 5px;
+        box-sizing: border-box;
+    }
+
+    .welBottomTop li:nth-child(2) {
+        text-align: right;
+    }
+
+    .heart {
+        color: #f00;
+    }
+
+    /* /welRight 영역 */
+    /* /welcome section */
+
+    /* Aboutme 영역 */
+    #aboutme {
+        width: 100%;
+        height: 100vh;
+        padding: 4em;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #aboutme h2 {
+        text-align: right;
+        font-size: 5em;
+        margin-top: 50px;
+        padding-right: 120px;
+    }
+
+    h2 span {
+        background: linear-gradient(90deg, #72cbff 20%, #a74ae4 80%);
+        color: transparent;
+        background-clip: text;
+        background-size: 200%;
+        display: inline-block;
+        animation: 
+            moveLetter 1s ease-in-out infinite,
+            moveLetterCra 1s linear infinite;
+    }
+
+    /* Delay for each letter */
+    h2 span:nth-child(1) { animation-delay: 0s; }
+    h2 span:nth-child(2) { animation-delay: 0.2s; }
+    h2 span:nth-child(3) { animation-delay: 0.4s; }
+    h2 span:nth-child(4) { animation-delay: 0.6s; }
+    h2 span:nth-child(5) { animation-delay: 0.8s; }
+    h2 span:nth-child(6) { animation-delay: 1s; }
+    h2 span:nth-child(7) { animation-delay: 1.2s; }
+
+    /* Animation keyframes */
+    @keyframes moveLetter {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes moveLetterCra {
+        0% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    #aboutme > ul {
+        width: 1200px;
+        margin: 0px auto;
+        display: flex;
+        justify-content: center;
+        gap: 10%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .aboutLeft {
+        width: 450px;
+        perspective: 900px;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+        min-height: 600px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: 3s;
+
+        animation: moveCard 5s ease-in-out infinite;
+    }
+
+    @keyframes moveCard {
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        50% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: rotateY(0deg);
+        }
+    }
+
+    .card:hover {
+        animation-play-state: paused;
+    }
+
+    .aboutFront {
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        background: url(./../img/section/semi2.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        font-size: 0.8em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        backface-visibility: hidden;
+        z-index: 10;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .aboutFront .aboutprofile, .aboutBack .aboutprofile {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        color: var(--white_gray);
+        font-size: 1.5em;
+        transform: translateY(280px);
+    }
+
+    .aboutBack {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotateY(180deg);
+        border-radius: 20px;
+        overflow: hidden;
+        background-color: var(--main_color02);
+    }
+
+    .aboutBack .aboutmeSkill {
+        width: 100%;
+    }
+
+    .aboutBack .aboutmeSkill li {
+        width: 80%;
+        margin: 30px auto;
+        background-color: var(--main_color03);
+        color: var(--main_color01);
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        position: relative;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    .aboutBack .aboutmeSkill li .program {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .aboutBack .aboutmeSkill .Skillbar {
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        border-radius: 20px;
+    }
+
+    .aboutmeSkill .ninety{
+        width: 90%;
+        transition: 1s;
+        background-color: var(--main_color08);
+    }
+
+    .aboutmeSkill .eighty{
+        width: 80%;
+        transition: 1s;
+        background-color: var(--main_color08);
+    }
+
+    .aboutmeSkill .seventy{
+        width: 70%;
+        transition: 1s;
+        background-color: var(--main_color08);
+    }
+
+    .aboutRight {
+        width: 750px;
+        height: 100%;
+        padding: 2.5em;
+        box-sizing: border-box;
+        line-height: 40px;
+        opacity: 0;
+        transform: translateX(600px);
+    }
+
+    .aboutRight.onAbout {
+        opacity: 1;
+        transform: translateX(0px);
+        transition: 2s;
+    }
+
+    .aboutRight dt {
+        font-size: 2em;
+        color: var(--main_color07);
+        margin: 1.3em 0px;
+    }
+
+    .aboutRight dd {
+        text-align: right;
+        font-size: 1.3em;
+    }
+
+    .career li {
+        margin: 1.2em 0px;
+    }
+
+    /* /Aboutme 영역 */
+
+    /* coding 영역 */
+    #coding {
+        width: 100%;
+        height: 100vh;
+        padding: 4em;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        background-color: var(--main_color02);
+    }
+
+    #coding h2 {
+        text-align: left;
+        font-size: 5em;
+        margin-top: 50px;
+        padding-left: 130px;
+    }
+
+    .codingDetail {
+        width: 1200px;
+        height: 70%;
+        min-height: 500px;
+        margin: 80px auto;
+        border-radius: 20px;
+        position: relative;
+        padding: 2em 0px;
+        box-sizing: border-box;
+        background-color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .codingDetail .codingDtl {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 3em 4em;
+        box-sizing: border-box;
+        opacity: 0;
+    }
+
+    .codingDetail li:nth-child(1) {
+        opacity: 1;
+    }
+
+    .codingDetail .codingDtl.view {
+        opacity: 1;
+        transition: 1s;
+    }
+
+    .codingCon {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .codingCon > li {
+        width: 50%;
+        position: relative;
+    }
+
+    .codingCon .codingMockup img {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .codingConDetail {
+        line-height: 2.6em;
+        background-color: var(--main_color03);
+        border-radius: 20px;
+        padding: 1.5em 3em;
+        box-sizing: border-box;
+        color: var(--main_color01);
+    }
+
+    .codingConDetail h3 {
+        font-size: 2em;
+    }
+    
+    .codingConDetail dt {
+        font-size: 1.5em;
+    }
+
+    .codingBtn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .codingBtn li {
+        width: 100%;
+        background-color: RGB(255, 165, 0);
+        margin: 0px 0.5em;
+        border-radius: 5px;
+    }
+
+    .codingBtn li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* codingDetail navi */
+    .codingDetailnavi {
+        z-index: 30;
+        position: absolute;
+        left: 50%;
+        bottom: 80px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        transform: translateX(-50%);
+    }
+
+    .codingDetailnavi li {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: var(--main_color04);
+        cursor: pointer;
+    }
+
+    .codingDetailnavi li.bnlist {
+        width: 2rem;
+        background-color: var(--main_color05);
+        border-radius: 30px;
+    }
+
+    #coding > a{
+        display: block;
+        z-index:30;
+        position:absolute;
+        top: 530px;
+        padding: 0.8rem 1.2rem;
+        /* background-color: #00a2ff; */
+    }
+
+    #coding .bnprev{
+        font-size: 2.5rem;
+        left: 220px;
+        color: var(--main_color05);
+    }
+
+    #coding .bnnext{
+        font-size: 2.5rem;
+        right: 220px;
+        color: var(--main_color05);
+    }
+
+    /* /coding 영역 */
+
+    /* content 영역 */
+
+    #content {
+        width: 100%;
+        height: 100vh;
+        min-height: 700px;
+        padding: 4em;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    #content h2 {
+        text-align: right;
+        font-size: 5em;
+        margin-top: 50px;
+        padding-right: 120px;
+    }
+
+    #content .conti {
+        width: 1200px;
+        height: 100vh;
+        margin: 0px auto;
+    }
+
+    .contiInfo {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        transform: translate(-50%, -30%);
+    }
+
+    .contiInfo dl {
+        background-color: var(--main_color02);
+        color: var(--main_color07);
+        padding: 2em 4em;
+        border-radius: 15px;
+
+        animation: conMove 2s ease-in-out infinite;
+    }
+
+    dl:nth-child(1) { animation-delay: 0.2s; }
+    dl:nth-child(2) { animation-delay: 0.6s; }
+    dl:nth-child(3) { animation-delay: 1s; }
+
+    @keyframes conMove {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(30px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    .contiInfo dt {
+        font-size: 1.4em;
+        margin-bottom: 0.5em;
+    }
+
+    .contiImg {
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* /content 영역 */
+
+    /* footer */
+    footer {
+        width: 100%;
+        height: 30vh;
+        background-color: var(--main_color02);
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .ftContact {
+        margin: 0px auto;
+    }
+
+    .ftCopy {
+        width: 100%;
+        height: 20%;
+        padding: 1.2rem;
+        box-sizing: border-box;
+        text-align: center;
+        color: var(--main_color01);
+        margin: 0px auto;
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+
+    .topBtn {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        opacity: 0;
+        z-index: 50;
+        font-size: 1.8rem;
+    }
+
+    .ftTopbtn {
+        opacity: 1;
+        transition: opacity 0.8s ease;
+    }
+
+    .topBtn a {
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: var(--main_color01);
+        border: 1px solid var(--dark_gray);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* /footer */
 }
 
-@media all and (min-width:480px){
+@media all and (min-width:480px) and (max-width:767px) {
+    /* header */
+    header {
+        background-color: transparent;
+        width: 100%;
+        padding: 0.8rem;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        z-index: 100;
+        opacity: 1;
+        box-sizing: border-box;
+    }
+
+    h1 img {
+        width: 3em;
+        margin-top: 1.2rem;
+    }
     
+    header:hover {
+        background-color: var(--main_color02);
+    }
+
+    /* header scroll event */
+
+    .on {
+        width: 100%;
+        height: 80px;
+        padding: 0.6rem;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        transition: 1s;
+        opacity: 1;
+    }
+
+    /* mainMenu 메인메뉴 스타일 */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+    }
+
+    .mainMenu {
+        display: flex;
+    }
+
+    .mainMenu li {
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+    }
+
+    .mainMenu a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        font-weight: bold;
+        color: var(--main_color04);
+        font-size: 1.2rem;
+        padding: 0px 2em;
+        box-sizing: border-box;
+    }
+
+    .mainMenu a:hover {
+        color: var(--main_color07);
+    }
+
+    /* subMenu 서브메뉴 스타일*/
+    .subBack {
+        display: none;
+    }
+
+    .subMenu {
+        display: none;
+    }
+
+    /* menuBar 서브메뉴 bar */
+    .menuBar {
+        display: none;
+    }
+
+    /* main 영역 */
+    /* welcome section */
+    #welcome {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .welDetail {
+        width: 1200px;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* welLeft 영역 */
+
+    .welDetail .welLeft {
+        width: 750px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .welDetail .welLeft div {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        /* opacity: 0; */
+    }
+
+    .welDetail .welLeft h3 {
+        font-size: 8em;
+        text-align: center;
+        background: linear-gradient(90deg, #00a2ff 20%, #9900ff 80%);
+        color: transparent;
+        background-clip: text;
+        background-size: 150%;
+    
+        animation: 
+            moveToLeft 2s ease-out forwards,
+            moveGradient 2s linear infinite;
+    }
+    
+    @keyframes moveToLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-500px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes moveGradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        100% {
+            background-position: 100% 50%;
+        }
+    }
+
+    .welDetail .welLeft p {
+        padding: 0px 40px;
+        box-sizing: border-box;
+        font-size: 3em;
+        color: var(--main_color04);
+        text-align: right;
+        background: linear-gradient(150deg, rgb(153, 0, 255) 80%, rgb(238, 213, 255) 20%);
+        color: transparent;
+        background-clip: text;
+        background-size: 150%;
+    
+        animation: 
+            moveToRight 2s ease-out forwards,
+            moveGra 2s linear infinite;
+    }
+    
+    @keyframes moveToRight {
+        0% {
+            transform: translateX(200px);
+            opacity: 0;
+        };
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        };
+    }
+
+    @keyframes moveGra {
+        0% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    /* /welLeft 영역 */
+
+    /* welRight 영역 */
+
+    .welDetail .welRight {
+        width: 450px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .welDetail .welRight div {
+        width: 90%;
+        height: 70%;
+        min-height: 650px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+    }
+
+    .welDetail .welRight div .welAll {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        border: 5px solid var(--main_color03);
+        overflow: hidden;
+        position: relative;
+
+        animation: moveWelAll 1s ease-out forwards;
+    }
+
+    @keyframes moveWelAll {
+        0% {
+            transform: translateY(500px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+
+    .welDetail .welRight div .welAll .welTop {
+        width: 100%;
+        height: 15%;
+        overflow: hidden;
+        padding: 1.2em;
+        box-sizing: border-box;
+    }
+
+    .welDetail .welRight div .welAll .welTop > ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .welDetail .welRight div .welAll .welTop > ul > li:nth-child(2) {
+        text-align: right;
+        font-size: 1.5em;
+        margin-top: 0.7em;
+    }
+
+    .welTopDetail {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .welTopDetail .welProfile {
+        width: 50px;
+        height: 50px;
+    }
+
+    .welTopDetail img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .welTopDetail li:nth-child(2) {
+        margin-left: 0.8em;
+    }
+
+    .welTopDetail li:nth-child(2) p {
+        width: 100%;
+        margin-top: 0.5em;
+    }
+
+    .welDetail .welRight div .welAll .welMiddle {
+        width: 100%;
+        height: 55%;
+        overflow: hidden;
+    }
+
+    .welDetail .welRight div .welAll .welMiddle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .welDetail .welRight div .welAll .welBottom {
+        width: 100%;
+        height: 30%;
+        padding: 1.2em;
+        box-sizing: border-box;
+    }
+
+    .welDetail .welRight div .welAll .welBottom > ul {
+        width: 100%;
+    }
+
+    .welDetail .welRight div .welAll .welBottom > ul > li {
+        width: 100%;
+        margin-bottom: 0.8em;
+    }
+
+    .welDetail .welRight div .welAll .welBottom .welBottomdtl {
+        padding: 20px 0px;
+        box-sizing: border-box;
+    }
+
+    .welBottomTop {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.5rem;
+    }
+
+    .welBottomTop li:nth-child(1) i {
+        padding: 0px 5px;
+        box-sizing: border-box;
+    }
+
+    .welBottomTop li:nth-child(2) {
+        text-align: right;
+    }
+
+    .heart {
+        color: #f00;
+    }
+
+    /* /welRight 영역 */
+    /* /welcome section */
+
+    /* Aboutme 영역 */
+    #aboutme {
+        width: 100%;
+        height: 100vh;
+        padding: 4em;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #aboutme h2 {
+        text-align: right;
+        font-size: 5em;
+        margin-top: 50px;
+        padding-right: 120px;
+    }
+
+    h2 span {
+        background: linear-gradient(90deg, #72cbff 20%, #a74ae4 80%);
+        color: transparent;
+        background-clip: text;
+        background-size: 200%;
+        display: inline-block;
+        animation: 
+            moveLetter 1s ease-in-out infinite,
+            moveLetterCra 1s linear infinite;
+    }
+
+    /* Delay for each letter */
+    h2 span:nth-child(1) { animation-delay: 0s; }
+    h2 span:nth-child(2) { animation-delay: 0.2s; }
+    h2 span:nth-child(3) { animation-delay: 0.4s; }
+    h2 span:nth-child(4) { animation-delay: 0.6s; }
+    h2 span:nth-child(5) { animation-delay: 0.8s; }
+    h2 span:nth-child(6) { animation-delay: 1s; }
+    h2 span:nth-child(7) { animation-delay: 1.2s; }
+
+    /* Animation keyframes */
+    @keyframes moveLetter {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes moveLetterCra {
+        0% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    #aboutme > ul {
+        width: 1200px;
+        margin: 0px auto;
+        display: flex;
+        justify-content: center;
+        gap: 10%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .aboutLeft {
+        width: 450px;
+        perspective: 900px;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+        min-height: 600px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: 3s;
+
+        animation: moveCard 5s ease-in-out infinite;
+    }
+
+    @keyframes moveCard {
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        50% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: rotateY(0deg);
+        }
+    }
+
+    .card:hover {
+        animation-play-state: paused;
+    }
+
+    .aboutFront {
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        background: url(./../img/section/semi2.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        font-size: 0.8em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        backface-visibility: hidden;
+        z-index: 10;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .aboutFront .aboutprofile, .aboutBack .aboutprofile {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        color: var(--white_gray);
+        font-size: 1.5em;
+        transform: translateY(280px);
+    }
+
+    .aboutBack {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotateY(180deg);
+        border-radius: 20px;
+        overflow: hidden;
+        background-color: var(--main_color02);
+    }
+
+    .aboutBack .aboutmeSkill {
+        width: 100%;
+    }
+
+    .aboutBack .aboutmeSkill li {
+        width: 80%;
+        margin: 30px auto;
+        background-color: var(--main_color03);
+        color: var(--main_color01);
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        position: relative;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    .aboutBack .aboutmeSkill li .program {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .aboutBack .aboutmeSkill .Skillbar {
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        border-radius: 20px;
+    }
+
+    .aboutmeSkill .ninety{
+        width: 90%;
+        transition: 1s;
+        background-color: var(--main_color08);
+    }
+
+    .aboutmeSkill .eighty{
+        width: 80%;
+        transition: 1s;
+        background-color: var(--main_color08);
+    }
+
+    .aboutmeSkill .seventy{
+        width: 70%;
+        transition: 1s;
+        background-color: var(--main_color08);
+    }
+
+    .aboutRight {
+        width: 750px;
+        height: 100%;
+        padding: 2.5em;
+        box-sizing: border-box;
+        line-height: 40px;
+        opacity: 0;
+        transform: translateX(600px);
+    }
+
+    .aboutRight.onAbout {
+        opacity: 1;
+        transform: translateX(0px);
+        transition: 2s;
+    }
+
+    .aboutRight dt {
+        font-size: 2em;
+        color: var(--main_color07);
+        margin: 1.3em 0px;
+    }
+
+    .aboutRight dd {
+        text-align: right;
+        font-size: 1.3em;
+    }
+
+    .career li {
+        margin: 1.2em 0px;
+    }
+
+    /* /Aboutme 영역 */
+
+    /* coding 영역 */
+    #coding {
+        width: 100%;
+        height: 100vh;
+        padding: 4em;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        background-color: var(--main_color02);
+    }
+
+    #coding h2 {
+        text-align: left;
+        font-size: 5em;
+        margin-top: 50px;
+        padding-left: 130px;
+    }
+
+    .codingDetail {
+        width: 1200px;
+        height: 70%;
+        min-height: 500px;
+        margin: 80px auto;
+        border-radius: 20px;
+        position: relative;
+        padding: 2em 0px;
+        box-sizing: border-box;
+        background-color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .codingDetail .codingDtl {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 3em 4em;
+        box-sizing: border-box;
+        opacity: 0;
+    }
+
+    .codingDetail li:nth-child(1) {
+        opacity: 1;
+    }
+
+    .codingDetail .codingDtl.view {
+        opacity: 1;
+        transition: 1s;
+    }
+
+    .codingCon {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .codingCon > li {
+        width: 50%;
+        position: relative;
+    }
+
+    .codingCon .codingMockup img {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .codingConDetail {
+        line-height: 2.6em;
+        background-color: var(--main_color03);
+        border-radius: 20px;
+        padding: 1.5em 3em;
+        box-sizing: border-box;
+        color: var(--main_color01);
+    }
+
+    .codingConDetail h3 {
+        font-size: 2em;
+    }
+    
+    .codingConDetail dt {
+        font-size: 1.5em;
+    }
+
+    .codingBtn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .codingBtn li {
+        width: 100%;
+        background-color: RGB(255, 165, 0);
+        margin: 0px 0.5em;
+        border-radius: 5px;
+    }
+
+    .codingBtn li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* codingDetail navi */
+    .codingDetailnavi {
+        z-index: 30;
+        position: absolute;
+        left: 50%;
+        bottom: 80px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        transform: translateX(-50%);
+    }
+
+    .codingDetailnavi li {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: var(--main_color04);
+        cursor: pointer;
+    }
+
+    .codingDetailnavi li.bnlist {
+        width: 2rem;
+        background-color: var(--main_color05);
+        border-radius: 30px;
+    }
+
+    #coding > a{
+        display: block;
+        z-index:30;
+        position:absolute;
+        top: 530px;
+        padding: 0.8rem 1.2rem;
+        /* background-color: #00a2ff; */
+    }
+
+    #coding .bnprev{
+        font-size: 2.5rem;
+        left: 220px;
+        color: var(--main_color05);
+    }
+
+    #coding .bnnext{
+        font-size: 2.5rem;
+        right: 220px;
+        color: var(--main_color05);
+    }
+
+    /* /coding 영역 */
+
+    /* content 영역 */
+
+    #content {
+        width: 100%;
+        height: 100vh;
+        min-height: 700px;
+        padding: 4em;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    #content h2 {
+        text-align: right;
+        font-size: 5em;
+        margin-top: 50px;
+        padding-right: 120px;
+    }
+
+    #content .conti {
+        width: 1200px;
+        height: 100vh;
+        margin: 0px auto;
+    }
+
+    .contiInfo {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        transform: translate(-50%, -30%);
+    }
+
+    .contiInfo dl {
+        background-color: var(--main_color02);
+        color: var(--main_color07);
+        padding: 2em 4em;
+        border-radius: 15px;
+
+        animation: conMove 2s ease-in-out infinite;
+    }
+
+    dl:nth-child(1) { animation-delay: 0.2s; }
+    dl:nth-child(2) { animation-delay: 0.6s; }
+    dl:nth-child(3) { animation-delay: 1s; }
+
+    @keyframes conMove {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(30px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    .contiInfo dt {
+        font-size: 1.4em;
+        margin-bottom: 0.5em;
+    }
+
+    .contiImg {
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* /content 영역 */
+
+    /* footer */
+    footer {
+        width: 100%;
+        height: 30vh;
+        background-color: var(--main_color02);
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .ftContact {
+        margin: 0px auto;
+    }
+
+    .ftCopy {
+        width: 100%;
+        height: 20%;
+        padding: 1.2rem;
+        box-sizing: border-box;
+        text-align: center;
+        color: var(--main_color01);
+        margin: 0px auto;
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+
+    .topBtn {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        opacity: 0;
+        z-index: 50;
+        font-size: 1.8rem;
+    }
+
+    .ftTopbtn {
+        opacity: 1;
+        transition: opacity 0.8s ease;
+    }
+
+    .topBtn a {
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: var(--main_color01);
+        border: 1px solid var(--dark_gray);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* /footer */ 
 }
 
-@media all and (max-width:479px){
+@media all and (max-width:479px) {
+    /* header */
+    header {
+        background-color: transparent;
+        width: 100%;
+        padding: 0.8rem;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        z-index: 100;
+        opacity: 1;
+        box-sizing: border-box;
+    }
+
+    h1 img {
+        width: 3em;
+        margin-top: 1.2rem;
+    }
     
+    header:hover {
+        background-color: var(--main_color02);
+    }
+
+    /* header scroll event */
+
+    .on {
+        width: 100%;
+        height: 80px;
+        padding: 0.6rem;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        transition: 1s;
+        opacity: 1;
+    }
+
+    /* mainMenu 메인메뉴 스타일 */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+    }
+
+    .mainMenu {
+        display: flex;
+    }
+
+    .mainMenu li {
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+    }
+
+    .mainMenu a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        font-weight: bold;
+        color: var(--main_color04);
+        font-size: 1.2rem;
+        padding: 0px 2em;
+        box-sizing: border-box;
+    }
+
+    .mainMenu a:hover {
+        color: var(--main_color07);
+    }
+
+    /* subMenu 서브메뉴 스타일*/
+    .subBack {
+        display: none;
+    }
+
+    .subMenu {
+        display: none;
+    }
+
+    /* menuBar 서브메뉴 bar */
+    .menuBar {
+        display: none;
+    }
+
+    /* main 영역 */
+    /* welcome section */
+    #welcome {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .welDetail {
+        width: 1200px;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* welLeft 영역 */
+
+    .welDetail .welLeft {
+        width: 750px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .welDetail .welLeft div {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        /* opacity: 0; */
+    }
+
+    .welDetail .welLeft h3 {
+        font-size: 8em;
+        text-align: center;
+        background: linear-gradient(90deg, #00a2ff 20%, #9900ff 80%);
+        color: transparent;
+        background-clip: text;
+        background-size: 150%;
+    
+        animation: 
+            moveToLeft 2s ease-out forwards,
+            moveGradient 2s linear infinite;
+    }
+    
+    @keyframes moveToLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-500px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes moveGradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        100% {
+            background-position: 100% 50%;
+        }
+    }
+
+    .welDetail .welLeft p {
+        padding: 0px 40px;
+        box-sizing: border-box;
+        font-size: 3em;
+        color: var(--main_color04);
+        text-align: right;
+        background: linear-gradient(150deg, rgb(153, 0, 255) 80%, rgb(238, 213, 255) 20%);
+        color: transparent;
+        background-clip: text;
+        background-size: 150%;
+    
+        animation: 
+            moveToRight 2s ease-out forwards,
+            moveGra 2s linear infinite;
+    }
+    
+    @keyframes moveToRight {
+        0% {
+            transform: translateX(200px);
+            opacity: 0;
+        };
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        };
+    }
+
+    @keyframes moveGra {
+        0% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    /* /welLeft 영역 */
+
+    /* welRight 영역 */
+
+    .welDetail .welRight {
+        width: 450px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .welDetail .welRight div {
+        width: 90%;
+        height: 70%;
+        min-height: 650px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+    }
+
+    .welDetail .welRight div .welAll {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        border: 5px solid var(--main_color03);
+        overflow: hidden;
+        position: relative;
+
+        animation: moveWelAll 1s ease-out forwards;
+    }
+
+    @keyframes moveWelAll {
+        0% {
+            transform: translateY(500px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+
+    .welDetail .welRight div .welAll .welTop {
+        width: 100%;
+        height: 15%;
+        overflow: hidden;
+        padding: 1.2em;
+        box-sizing: border-box;
+    }
+
+    .welDetail .welRight div .welAll .welTop > ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .welDetail .welRight div .welAll .welTop > ul > li:nth-child(2) {
+        text-align: right;
+        font-size: 1.5em;
+        margin-top: 0.7em;
+    }
+
+    .welTopDetail {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .welTopDetail .welProfile {
+        width: 50px;
+        height: 50px;
+    }
+
+    .welTopDetail img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .welTopDetail li:nth-child(2) {
+        margin-left: 0.8em;
+    }
+
+    .welTopDetail li:nth-child(2) p {
+        width: 100%;
+        margin-top: 0.5em;
+    }
+
+    .welDetail .welRight div .welAll .welMiddle {
+        width: 100%;
+        height: 55%;
+        overflow: hidden;
+    }
+
+    .welDetail .welRight div .welAll .welMiddle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .welDetail .welRight div .welAll .welBottom {
+        width: 100%;
+        height: 30%;
+        padding: 1.2em;
+        box-sizing: border-box;
+    }
+
+    .welDetail .welRight div .welAll .welBottom > ul {
+        width: 100%;
+    }
+
+    .welDetail .welRight div .welAll .welBottom > ul > li {
+        width: 100%;
+        margin-bottom: 0.8em;
+    }
+
+    .welDetail .welRight div .welAll .welBottom .welBottomdtl {
+        padding: 20px 0px;
+        box-sizing: border-box;
+    }
+
+    .welBottomTop {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.5rem;
+    }
+
+    .welBottomTop li:nth-child(1) i {
+        padding: 0px 5px;
+        box-sizing: border-box;
+    }
+
+    .welBottomTop li:nth-child(2) {
+        text-align: right;
+    }
+
+    .heart {
+        color: #f00;
+    }
+
+    /* /welRight 영역 */
+    /* /welcome section */
+
+    /* Aboutme 영역 */
+    #aboutme {
+        width: 100%;
+        height: 100vh;
+        padding: 4em;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #aboutme h2 {
+        text-align: right;
+        font-size: 5em;
+        margin-top: 50px;
+        padding-right: 120px;
+    }
+
+    h2 span {
+        background: linear-gradient(90deg, #72cbff 20%, #a74ae4 80%);
+        color: transparent;
+        background-clip: text;
+        background-size: 200%;
+        display: inline-block;
+        animation: 
+            moveLetter 1s ease-in-out infinite,
+            moveLetterCra 1s linear infinite;
+    }
+
+    /* Delay for each letter */
+    h2 span:nth-child(1) { animation-delay: 0s; }
+    h2 span:nth-child(2) { animation-delay: 0.2s; }
+    h2 span:nth-child(3) { animation-delay: 0.4s; }
+    h2 span:nth-child(4) { animation-delay: 0.6s; }
+    h2 span:nth-child(5) { animation-delay: 0.8s; }
+    h2 span:nth-child(6) { animation-delay: 1s; }
+    h2 span:nth-child(7) { animation-delay: 1.2s; }
+
+    /* Animation keyframes */
+    @keyframes moveLetter {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes moveLetterCra {
+        0% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    #aboutme > ul {
+        width: 1200px;
+        margin: 0px auto;
+        display: flex;
+        justify-content: center;
+        gap: 10%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .aboutLeft {
+        width: 450px;
+        perspective: 900px;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+        min-height: 600px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: 3s;
+
+        animation: moveCard 5s ease-in-out infinite;
+    }
+
+    @keyframes moveCard {
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        50% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: rotateY(0deg);
+        }
+    }
+
+    .card:hover {
+        animation-play-state: paused;
+    }
+
+    .aboutFront {
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        background: url(./../img/section/semi2.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        font-size: 0.8em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        backface-visibility: hidden;
+        z-index: 10;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .aboutFront .aboutprofile, .aboutBack .aboutprofile {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        color: var(--white_gray);
+        font-size: 1.5em;
+        transform: translateY(280px);
+    }
+
+    .aboutBack {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotateY(180deg);
+        border-radius: 20px;
+        overflow: hidden;
+        background-color: var(--main_color02);
+    }
+
+    .aboutBack .aboutmeSkill {
+        width: 100%;
+    }
+
+    .aboutBack .aboutmeSkill li {
+        width: 80%;
+        margin: 30px auto;
+        background-color: var(--main_color03);
+        color: var(--main_color01);
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        position: relative;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    .aboutBack .aboutmeSkill li .program {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .aboutBack .aboutmeSkill .Skillbar {
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        border-radius: 20px;
+    }
+
+    .aboutmeSkill .ninety{
+        width: 90%;
+        transition: 1s;
+        background-color: var(--main_color08);
+    }
+
+    .aboutmeSkill .eighty{
+        width: 80%;
+        transition: 1s;
+        background-color: var(--main_color08);
+    }
+
+    .aboutmeSkill .seventy{
+        width: 70%;
+        transition: 1s;
+        background-color: var(--main_color08);
+    }
+
+    .aboutRight {
+        width: 750px;
+        height: 100%;
+        padding: 2.5em;
+        box-sizing: border-box;
+        line-height: 40px;
+        opacity: 0;
+        transform: translateX(600px);
+    }
+
+    .aboutRight.onAbout {
+        opacity: 1;
+        transform: translateX(0px);
+        transition: 2s;
+    }
+
+    .aboutRight dt {
+        font-size: 2em;
+        color: var(--main_color07);
+        margin: 1.3em 0px;
+    }
+
+    .aboutRight dd {
+        text-align: right;
+        font-size: 1.3em;
+    }
+
+    .career li {
+        margin: 1.2em 0px;
+    }
+
+    /* /Aboutme 영역 */
+
+    /* coding 영역 */
+    #coding {
+        width: 100%;
+        height: 100vh;
+        padding: 4em;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        background-color: var(--main_color02);
+    }
+
+    #coding h2 {
+        text-align: left;
+        font-size: 5em;
+        margin-top: 50px;
+        padding-left: 130px;
+    }
+
+    .codingDetail {
+        width: 1200px;
+        height: 70%;
+        min-height: 500px;
+        margin: 80px auto;
+        border-radius: 20px;
+        position: relative;
+        padding: 2em 0px;
+        box-sizing: border-box;
+        background-color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .codingDetail .codingDtl {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 3em 4em;
+        box-sizing: border-box;
+        opacity: 0;
+    }
+
+    .codingDetail li:nth-child(1) {
+        opacity: 1;
+    }
+
+    .codingDetail .codingDtl.view {
+        opacity: 1;
+        transition: 1s;
+    }
+
+    .codingCon {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .codingCon > li {
+        width: 50%;
+        position: relative;
+    }
+
+    .codingCon .codingMockup img {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .codingConDetail {
+        line-height: 2.6em;
+        background-color: var(--main_color03);
+        border-radius: 20px;
+        padding: 1.5em 3em;
+        box-sizing: border-box;
+        color: var(--main_color01);
+    }
+
+    .codingConDetail h3 {
+        font-size: 2em;
+    }
+    
+    .codingConDetail dt {
+        font-size: 1.5em;
+    }
+
+    .codingBtn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .codingBtn li {
+        width: 100%;
+        background-color: RGB(255, 165, 0);
+        margin: 0px 0.5em;
+        border-radius: 5px;
+    }
+
+    .codingBtn li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* codingDetail navi */
+    .codingDetailnavi {
+        z-index: 30;
+        position: absolute;
+        left: 50%;
+        bottom: 80px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        transform: translateX(-50%);
+    }
+
+    .codingDetailnavi li {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: var(--main_color04);
+        cursor: pointer;
+    }
+
+    .codingDetailnavi li.bnlist {
+        width: 2rem;
+        background-color: var(--main_color05);
+        border-radius: 30px;
+    }
+
+    #coding > a{
+        display: block;
+        z-index:30;
+        position:absolute;
+        top: 530px;
+        padding: 0.8rem 1.2rem;
+        /* background-color: #00a2ff; */
+    }
+
+    #coding .bnprev{
+        font-size: 2.5rem;
+        left: 220px;
+        color: var(--main_color05);
+    }
+
+    #coding .bnnext{
+        font-size: 2.5rem;
+        right: 220px;
+        color: var(--main_color05);
+    }
+
+    /* /coding 영역 */
+
+    /* content 영역 */
+
+    #content {
+        width: 100%;
+        height: 100vh;
+        min-height: 700px;
+        padding: 4em;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    #content h2 {
+        text-align: right;
+        font-size: 5em;
+        margin-top: 50px;
+        padding-right: 120px;
+    }
+
+    #content .conti {
+        width: 1200px;
+        height: 100vh;
+        margin: 0px auto;
+    }
+
+    .contiInfo {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        transform: translate(-50%, -30%);
+    }
+
+    .contiInfo dl {
+        background-color: var(--main_color02);
+        color: var(--main_color07);
+        padding: 2em 4em;
+        border-radius: 15px;
+
+        animation: conMove 2s ease-in-out infinite;
+    }
+
+    dl:nth-child(1) { animation-delay: 0.2s; }
+    dl:nth-child(2) { animation-delay: 0.6s; }
+    dl:nth-child(3) { animation-delay: 1s; }
+
+    @keyframes conMove {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(30px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    .contiInfo dt {
+        font-size: 1.4em;
+        margin-bottom: 0.5em;
+    }
+
+    .contiImg {
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* /content 영역 */
+
+    /* footer */
+    footer {
+        width: 100%;
+        height: 30vh;
+        background-color: var(--main_color02);
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .ftContact {
+        margin: 0px auto;
+    }
+
+    .ftCopy {
+        width: 100%;
+        height: 20%;
+        padding: 1.2rem;
+        box-sizing: border-box;
+        text-align: center;
+        color: var(--main_color01);
+        margin: 0px auto;
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+
+    .topBtn {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        opacity: 0;
+        z-index: 50;
+        font-size: 1.8rem;
+    }
+
+    .ftTopbtn {
+        opacity: 1;
+        transition: opacity 0.8s ease;
+    }
+
+    .topBtn a {
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: var(--main_color01);
+        border: 1px solid var(--dark_gray);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* /footer */
 }
